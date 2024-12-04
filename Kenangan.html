@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Kenangan SMA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .chalkboard {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            position: relative;
+            border: 10px solid #a67c52;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+
+        .chalkboard h1 {
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            white-space: nowrap;
+            text-shadow: 2px 2px 0px #a67c52;
+        }
+
+        .polaroid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 10px;
+            border: 3px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            animation: float 3s infinite;
+        }
+
+        .polaroid:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .polaroid img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Animasi untuk gerakan gambar */
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem 0;
+            background-color: #2c3e50;
+            color: white;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Album Kenangan SMA
+    </div>
+    <div class="chalkboard">
+        <h1>Album Kenangan: Alumni Kelas XII MIPA</h1>
+        <div class="polaroid-container">
+            <div class="polaroid">
+                <img src="img1.jpg" alt="Foto 1">
+            </div>
+            <div class="polaroid">
+                <img src="img2.jpg" alt="Foto 2">
+            </div>
+            <div class="polaroid">
+                <img src="img3.jpg" alt="Foto 3">
+            </div>
+            <div class="polaroid">
+                <img src="img4.jpg" alt="Foto 4">
+            </div>
+            <div class="polaroid">
+                <img src="img5.jpg" alt="Foto 5">
+            </div>
+            <div class="polaroid">
+                <img src="img6.jpg" alt="Foto 6">
+            </div>
+            <div class="polaroid">
+                <img src="img7.jpg" alt="Foto 7">
+            </div>
+            <div class="polaroid">
+                <img src="img8.jpg" alt="Foto 8">
+            </div>
+            <div class="polaroid">
+                <img src="img9.jpg" alt="Foto 9">
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; @2024 Alumni Kelas XII MIPA. Semua Hak Dilindungi.
+    </footer>
+
+    <!-- Elemen Audio untuk Musik Latar -->
+    <audio autoplay loop muted id="background-audio">
+        <source src="kenangan.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Mengaktifkan audio setelah halaman dimuat
+        window.onload = function() {
+            const audio = document.getElementById('background-audio');
+            audio.muted = false; // Menghapus mute setelah autoplay
+        };
+    </script>
+</body>
+</html>
